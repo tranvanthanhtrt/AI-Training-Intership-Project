@@ -1,7 +1,7 @@
+@import "fonts.css";
+
 body {
     margin: 0;
-    /*display: flex;*/
-    /*justify-content: center;*/
     background: #E5E5E5;
 }
 
@@ -19,10 +19,10 @@ header {
 }
 
 .header-content {
-    height: 60px;
+    min-height: 60px;
     padding: 0 80px;
     display: flex;
-
+    flex-wrap: wrap;
 
 }
 
@@ -105,47 +105,60 @@ header {
 }
 
 .banner {
-    /*height: 592px;*/
+    height: 500px;
     background: #FFFFFF;
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    /*flex-wrap: wrap;*/
+    /*justify-content: space-between;*/
+}
+
+.banner-aside {
+    margin: 0;
+    height: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.banner-aside-item {
+    width: 35%;
+    /*background: #FF7F0E;*/
+    height: 20%;
+    margin-left: 5%;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
     justify-content: space-between;
+
 }
-@media (max-width: 800px){
-    .container{
-        max-width: 800px;
-        margin: 0 auto;
-    }
-    .banner{
-        flex-direction: column;
-    }
-    .banner-content{
-        flex: 100%;
-    }
-    .banner-aside{
-        flex: 100%;
-        flex-direction: column;
-    }
-}
-.banner-content {
-    flex-basis: 60%;
-    height:500px;
+
+.banner-aside > :first-child {
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
     position: relative;
 
 }
 
-.banner-content img {
+.banner-aside > :first-child .banner-item-bgr {
     width: 100%;
     height: 100%;
-    border-radius: 10px;
 }
 
-.banner-content .text-block {
+.banner-aside > :first-child .banner-item-bgr img {
+    max-width: 100%;
+}
+
+.banner-aside > :first-child .banner-item-content {
     box-sizing: border-box;
     position: absolute; /* Position the background text */
     bottom: 0; /* At the bottom. Use top:0 to append it to the top */
-    background: rgb(0, 0, 0); /* Fallback color */
+    /*background: rgb(0, 0, 0); !* Fallback color *!*/
     background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
     color: #f1f1f1; /* Grey text */
     width: 100%; /* Full width */
@@ -153,48 +166,15 @@ header {
     padding-left: 45px; /* Some padding */
 }
 
-.text-block h3 {
-    font-family: Roboto, sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 40px;
-    /*line-height: 21px;*/
-    margin: 15px 0 0 0;
-    /* identical to box height, or 52% */
+.banner-aside > :first-child .banner-item-content h3 {
+    color: #f1f1f1; /* Grey text */
+    font-size: 30px;
 
-
-    color: #FFFFFF;
 }
 
-.text-block p {
-    font-family: Roboto, cursive;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 21px;
-    /* identical to box height, or 117% */
-    margin: 0;
-    color: #FFFFFF;
-}
-
-ul.banner-aside {
-    margin: 0;
-    min-height: 500px;
-    flex-basis: 35%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.banner-aside-item {
-    /*background: #FF7F0E;*/
-    max-height: 100px;
-    /*width: 100%;*/
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
+.banner-aside > :first-child .banner-item-content span {
+    color: #f1f1f1; /* Grey text */
+    bottom: 10px;
 }
 
 .banner-item-bgr {
@@ -220,20 +200,18 @@ ul.banner-aside {
 .banner-item-content h3 {
     margin: 0;
     color: #3278C3;
+    font-family: "AovelSansRounded", "DejaVu Serif", sans-serif;
 }
 
 .banner-item-content span {
     position: absolute;
-    bottom: 5px;
+    bottom: 5%;
     color: #323232;
 
 
 }
 
 .feature-to-day {
-
-    box-sizing: border-box;
-    height: 598px;
     background: #E2EEFF;
     border-radius: 8px;
     display: flex;
@@ -248,6 +226,7 @@ ul.banner-aside {
     display: flex;
     justify-content: space-between;
     padding: 0;
+    margin: 0;
 
 }
 
@@ -259,8 +238,8 @@ ul.banner-aside {
 }
 
 li.feature-item {
-    width: 290px;
-    height: 320px;
+    max-width: 24%;
+    min-height: 320px;
     background: #FFFFFF;
     border-radius: 6px;
     margin: 0;
@@ -311,7 +290,7 @@ li.feature-item {
     background: #FF7F0E;
     border: #FF7F0E 0 solid;
     border-radius: 30px;
-    font-family: Mulish, serif;
+    font-family: AovelSansRounded, Mulish, serif;
     font-style: normal;
     font-weight: bold;
     font-size: 16px;
@@ -333,7 +312,7 @@ footer {
 }
 
 footer .contact {
-    height: 288px;
+    min-height: 288px;
     border-bottom: 1px solid #B8B8B8;;
     display: flex;
     flex-direction: column;
@@ -345,16 +324,28 @@ footer .contact {
 footer .contact .social {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    padding: 0 620px;
+    /*flex-wrap: wrap;*/
+    justify-content: center;
+    /*width: 30%;*/
+    padding: 0;
     font-size: 19px;
     margin: 0;
+    /*margin: 0 auto;*/
     /*margin: auto;*/
 }
-.social-item{
+
+.social-item {
     list-style: none;
+    margin: 0 1%;
+    text-align: center;
+    /*background: green;*/
 }
-footer .contact nav {
+
+.social-item i {
+    font-size: 25px;
+}
+
+footer .contact .nav {
     font-family: Mulish, sans-serif;
     font-style: normal;
     font-weight: 600;
@@ -362,12 +353,19 @@ footer .contact nav {
     line-height: 150%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    margin: 0 300px;
-    /* identical to box height, or 24px */
+    justify-content: center;
+    margin: 0;
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
 }
 
-footer .contact nav a {
+.nav li {
+    margin: 0 1%;
+    text-align: center;
+}
+
+footer .contact .nav a {
     text-decoration: none;
 !important;
     color: #6C6C6C;
@@ -403,4 +401,51 @@ footer .contact .logo-footer img {
     margin: 0;
     color: #B5B5B5;
 }
+
+@media (max-width: 800px) {
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        /*background: red;*/
+    }
+
+    .banner {
+        height: auto;
+    }
+
+    .banner-aside .banner-aside-item {
+        min-width: 100%;
+        height: 100px;
+        margin-top: 10px;
+        margin-left: 0;
+        /*background: lightskyblue;*/
+    }
+    .banner-aside > :first-child{
+        height: 300px;
+    }
+    .banner-aside > :first-child .banner-item-bgr img {
+        width: 100%;
+    }
+
+    .feature-list {
+        flex-wrap: wrap;
+        align-content: space-between;
+        min-height: 680px;
+
+
+    }
+
+    li.feature-item {
+        min-width: 47%;
+    }
+
+    .header-content {
+        justify-content: center;
+    }
+
+    .social {
+        margin: 0 20%;
+    }
+}
+
 
