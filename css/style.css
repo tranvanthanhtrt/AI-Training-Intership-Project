@@ -202,7 +202,12 @@ header {
     color: #3278C3;
     font-family: "AovelSansRounded", "DejaVu Serif", sans-serif;
 }
+.banner-item-content h3 a{
+    text-decoration: none;
+    color: #3278C3;
+    font-family: "AovelSansRounded", "DejaVu Serif", sans-serif;
 
+}
 .banner-item-content span {
     position: absolute;
     bottom: 5%;
