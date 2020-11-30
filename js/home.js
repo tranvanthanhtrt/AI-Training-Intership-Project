@@ -7,6 +7,9 @@ window.onload = function () {
         }
     }
 
+
+
+    let user = new User('Thanh', 123456, '3.jpg')
     let listFilm = [];
     listFilm.push(new FilmItem('Lorem ipsum dolor sit amet consector dapster', '1.jpg', 'Một bộ phim mới của hãng phim supremeTech'));
     listFilm.push(new FilmItem('Lorem ipsum dolor sit amet consector dapster', '2.jpg', 'Một bộ phim mới của hãng phim supremeTech'));
@@ -27,3 +30,4 @@ window.onload = function () {
         films.appendChild(li);
     }
 }
+

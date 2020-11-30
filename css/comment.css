@@ -104,11 +104,11 @@ header {
 .film-detail p{
     margin-bottom: 0;
 }
-.film-info .info-title{
+.info-title{
     margin: 0;
 }
 .player{
-    background: white;
+    background: #E2EEFF;
 }
 .player-container{
     width: 100%;
@@ -118,6 +118,71 @@ iframe{
     width: 100%;
     height: 600px;
     border: 0;
+}
+.comments-section{
+    background: #E2EEFF;
+
+}
+.comment-list{
+    border: #c8d0d9 solid 1px;
+    padding-left: 0px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.comments-section .title{
+    color: #3278C3;
+    font-weight: bold;
+    font-size: 20px;
+}
+.comment{
+    display: flex;
+    background: white;
+    margin-bottom: 2px;
+}
+.comment .avatar{
+    width: 100px;
+    height: 100px;
+    /*height: 100%;*/
+}
+.comment-detail{
+    padding: 10px;
+}
+.comment-detail .create-at{
+    margin-bottom: 0;
+    color: #3278C3;
+}
+.comment-detail .user-name{
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-family: Debrosee-ALPnL, serif;
+    color: #3278C3;
+}
+.btn{
+    background: #FF7F0E;
+    border: #FF7F0E 0 solid;
+    /*border-radius: 30px;*/
+    font-family: AovelSansRounded, Mulish, serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 170%;
+    outline: 0;
+    /* or 27px */
+    color: #FFFFFF;
+}
+.btn-comment{
+    width: 150px;
+    height: 50px;
+
+}
+.btn-comment:hover{
+    color: black;
+}
+.comment-input{
+    margin-bottom: 10px;
+    width: 100%;
+    height: 50px;
+    outline: #3278C3 solid 0.5px;
 }
 footer {
     /*height: 378px;*/
