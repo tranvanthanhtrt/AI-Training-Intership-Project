@@ -4,19 +4,23 @@ body {
     margin: 0;
     background: #E5E5E5;
 }
-img{
+
+img {
     width: 100%;
     height: 100%;
 }
+
 .container {
     /*background: #FFFFFF;*/
     max-width: 1440px;
     margin: 0 auto;
 
 }
-.clear-fix{
+
+.clear-fix {
     padding: 10px 80px;
 }
+
 header {
     background: #FFFFFF;
     position: relative;
@@ -91,73 +95,94 @@ header {
     outline: none;
 
 }
-.film-banner{
+
+.film-banner {
     display: flex;
     background: #E2EEFF;
 }
-.film-poster{
+
+.film-poster {
     width: 30%;
 }
-.film-detail{
+
+.film-detail {
     padding: 0 20px;
 }
-.film-detail p{
+
+.film-detail p {
     margin-bottom: 0;
 }
-.info-title{
+
+.info-title {
     margin: 0;
 }
-.player{
+
+.player {
     background: #E2EEFF;
 }
-.player-container{
+
+.player-container {
     width: 100%;
     height: auto;
 }
-iframe{
+
+iframe {
     width: 100%;
     height: 600px;
     border: 0;
 }
-.comments-section{
+
+.comments-section {
     background: #E2EEFF;
 
 }
-.comment-list{
+
+.comment-list {
     border: #c8d0d9 solid 1px;
     padding-left: 0px;
     display: flex;
     flex-direction: column-reverse;
 }
-.comments-section .title{
+
+.comments-section .title {
     color: #3278C3;
     font-weight: bold;
     font-size: 20px;
 }
-.comment{
+
+.comment {
     display: flex;
     background: white;
     margin-bottom: 2px;
 }
-.comment .avatar{
+
+.comment .avatar {
     width: 100px;
     height: 100px;
     /*height: 100%;*/
 }
-.comment-detail{
+
+.comment-detail {
     padding: 10px;
 }
-.comment-detail .create-at{
+
+.comment-detail .create-at {
     margin-bottom: 0;
     color: #3278C3;
 }
-.comment-detail .user-name{
+
+.comment-detail .user-name {
     margin-top: 0;
     margin-bottom: 5px;
     font-family: Debrosee-ALPnL, serif;
     color: #3278C3;
 }
-.btn{
+
+.comment-content {
+    line-height: 30px
+}
+
+.btn {
     background: #FF7F0E;
     border: #FF7F0E 0 solid;
     /*border-radius: 30px;*/
@@ -170,19 +195,27 @@ iframe{
     /* or 27px */
     color: #FFFFFF;
 }
-.btn-comment{
+
+.btn-comment {
     width: 150px;
     height: 50px;
 
 }
-.btn-comment:hover{
+
+.btn-comment:hover {
     color: black;
 }
-.comment-input{
+
+.comment-input {
     margin-bottom: 10px;
+    font-size: 20px;
     width: 100%;
     height: 50px;
     outline: #3278C3 solid 0.5px;
+}
+.comment-input:focus{
+    height: 200px;
+    transition: 0.2s;
 }
 footer {
     /*height: 378px;*/
