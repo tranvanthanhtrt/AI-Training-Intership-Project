@@ -227,10 +227,6 @@ iframe {
     height: 50px;
     outline: #3278C3 solid 0.5px;
 }
-.comment-input:focus{
-    height: 200px;
-    transition: 0.2s;
-}
 
 footer {
     /*height: 378px;*/
